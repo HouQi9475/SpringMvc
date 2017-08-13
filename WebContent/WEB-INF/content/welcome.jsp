@@ -9,5 +9,8 @@
 <body>
 <!-- 页面可以访问Controller传递过来的message信息 -->
 ${requestScope.message}
+${requestScope.user.username }:欢迎您登录!您的年龄是${requestScope.user.age }岁！
+
+<a href="user/register">点击注册！</a>
 </body>
 </html>

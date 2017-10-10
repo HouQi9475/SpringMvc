@@ -29,7 +29,6 @@ public class UserController_requestMapping {
 	}
 
 	// 该方法映射的请求为: http://localhost:8080/SpringMvc/user/register,该方法支持get
-	// 将请求中的username的值赋值给username变量，password同样。
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public String registerForm() {
 		logger.info("调用register_GET...");

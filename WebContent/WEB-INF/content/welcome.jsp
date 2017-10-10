@@ -11,6 +11,10 @@
 ${requestScope.message}
 ${requestScope.user.username }:欢迎您登录!您的年龄是${requestScope.user.age }岁！
 
-<a href="user/register">点击注册！</a>
+<a href="user/register">点击注册！</a><br/><hr/>
+<h1>测试数据绑定</h1>
+<a href="pathVariable/3">测试@PathVariable</a><br/>
+<a href="requestHeader">测试@RequestHeader</a><br/>
+<a href="cookieVlue">测试@CookieVlue</a><br/><br/><hr/>
 </body>
 </html>

@@ -16,22 +16,24 @@
 
 	<!-- 配置handle，映射"/hello"请求 声明HelloController业务控制器类，将其映射到/hello请求 <bean name="/hello" 
 		class="org.houqi.controller.HelloController"/> -->
-	<!-- spring可以自动去扫描base-package下的包或者其下的java类。如果扫描到有spring相关注解的类则注册为bean -->
-	<context:component-scan base-package="org.houqi.controller.annotation" />
 	<!-- 处理映射器将bean的name作为url进行查找，需要在配置handle时指定name -->
 	<!-- <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping" 
 		/> -->
+	<!-- SimpleControllerHandlerAdapter是一个处理器适配器，所有处理器适配器都要实现HandlerAdapter接口 -->
+	<!-- <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" 
+		/> -->
+		
+		
+		
+	<!-- spring可以自动去扫描base-package下的包或者其下的java类。如果扫描到有spring相关注解的类则注册为bean -->
+	<context:component-scan base-package="org.houqi.controller.annotation" />
+
 	<!-- 配置annotation类型的处理映射器 -->
 	<bean
 		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />
 	<!-- 配置annotation类型的处理器适配器 -->
 	<bean
 		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter" />
-
-
-	<!-- SimpleControllerHandlerAdapter是一个处理器适配器，所有处理器适配器都要实现HandlerAdapter接口 -->
-	<!-- <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" 
-		/> -->
 
 	<!-- 视图解析器 -->
 	<bean

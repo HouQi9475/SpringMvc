@@ -11,21 +11,22 @@
 	
 	
  -->
-<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
-<script type="text/javascript" src="js/json2.js"></script>
+<script type="text/javascript" src="/SpringMvc/js/jquery-1.2.6.min.js"></script>
+<script type="text/javascript" src="/SpringMvc/js/json2.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		testRequestBody();
 	});
 	function testRequestBody(){
-		$.ajax("${pageContext.request.contextPath}/json/testRequestBody",
+		
+		$.ajax("SpringMvc/json/testRequestBody",
 				//发送请求的URL字符串
 				{
 					dataType:"json", //预期服务器返回的数据类型
 					type:"post",  //请求方式 
 					contentType:"application/json",  //发送信息到服务器时的内容编码格式
 					//发送到服务器的数据,请求成功后返回一个json数据，然后将数据设置到页面中的span中
-					date:JSON.stringify({id:1,name:"Spring Mvc练习"}),
+					data:JSON.stringify({id:1,name:"Spring Mvc练习"}),
 					async:true,  //默认设置下，所有请求都为异步请求。若为FALSE，则为同步请求
 					//请求成功后的回调函数
 					success:function(data){

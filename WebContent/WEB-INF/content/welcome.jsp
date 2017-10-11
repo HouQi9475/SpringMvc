@@ -16,5 +16,7 @@ ${requestScope.user.username }:欢迎您登录!您的年龄是${requestScope.use
 <a href="pathVariable/3">测试@PathVariable</a><br/>
 <a href="requestHeader">测试@RequestHeader</a><br/>
 <a href="cookieVlue">测试@CookieVlue</a><br/><br/><hr/>
+<a href="json/requestBody">测试@RequestBody</a><br/><br/><hr/>
+
 </body>
 </html>

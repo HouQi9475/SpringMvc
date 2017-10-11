@@ -22,18 +22,27 @@
 	<!-- SimpleControllerHandlerAdapter是一个处理器适配器，所有处理器适配器都要实现HandlerAdapter接口 -->
 	<!-- <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" 
 		/> -->
-		
-		
-		
+
+	<!-- 配置annotation类型的处理映射器 <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" 
+		/> 配置annotation类型的处理器适配器 <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter" 
+		/> -->
+
 	<!-- spring可以自动去扫描base-package下的包或者其下的java类。如果扫描到有spring相关注解的类则注册为bean -->
 	<context:component-scan base-package="org.houqi.controller.annotation" />
 
-	<!-- 配置annotation类型的处理映射器 -->
-	<bean
-		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />
-	<!-- 配置annotation类型的处理器适配器 -->
-	<bean
-		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter" />
+	<!-- 
+		设置配置方案
+		自动注册RequestMappingHandlerMapping和RequesetMappingHandlerAdapter两个bean
+		这是SpringMvc为@Controller分发请求所必需的，并提供了数据绑定支持，读写json支持(默认jackson)等功能
+		本例处理ajax请求时就使用到对json的支持
+	 -->
+	<mvc:annotation-driven />
+	<!-- 
+		使用默认的servlet来响应静态文件 
+		因为在web.xml中使用了DispatcherServlet拦截了所有url请求，而引入js时，DispatcherServlet会将/看成
+		请求路径，找不到时报404错误。而当配置文件加入这个servlet时，servlet会去找静态的内容，即js目录 
+	-->
+	<mvc:default-servlet-handler/>
 
 	<!-- 视图解析器 -->
 	<bean

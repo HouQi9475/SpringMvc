@@ -42,5 +42,10 @@ public class Book implements Serializable{
 	public void setAuther(String auther) {
 		this.auther = auther;
 	}
+
+	@Override
+	public String toString() {
+		return "Book [id=" + id + ", name=" + name + ", auther=" + auther + "]";
+	}
 	
 }

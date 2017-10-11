@@ -5,11 +5,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.codehaus.jackson.map.ObjectMapper;
 import org.houqi.domain.Book;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 /**
  * setJson方法中的第一个参数 @RequestBody Book book的作用是使用@RequestBody将传来的json格式的数据
@@ -22,6 +23,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class BookController {
 	private static final Log logger = LogFactory.getLog(BookController.class);
 
+	@RequestMapping(value="requestBody")
+	public String testRequestBody(){
+		return "jsonDemo";
+	}
 	// @RequestBody 根据json数据转换为对应的object对象
 	@RequestMapping(value = "testRequestBody")
 	public void setJson(@RequestBody Book book, HttpServletResponse response)

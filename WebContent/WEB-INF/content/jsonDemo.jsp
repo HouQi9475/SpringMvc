@@ -19,9 +19,10 @@
 	});
 	function testRequestBody(){
 		
-		$.ajax("SpringMvc/json/testRequestBody",
+		$.ajax(
 				//发送请求的URL字符串
 				{
+					url:"${pageContext.request.contextPath}/json/testRequestBody",
 					dataType:"json", //预期服务器返回的数据类型
 					type:"post",  //请求方式 
 					contentType:"application/json",  //发送信息到服务器时的内容编码格式

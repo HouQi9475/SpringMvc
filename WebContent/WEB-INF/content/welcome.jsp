@@ -15,8 +15,9 @@ ${requestScope.user.username }:欢迎您登录!您的年龄是${requestScope.use
 <h1>测试数据绑定</h1>
 <a href="pathVariable/3">测试@PathVariable</a><br/>
 <a href="requestHeader">测试@RequestHeader</a><br/>
-<a href="cookieVlue">测试@CookieVlue</a><br/><br/><hr/>
-<a href="json/requestBody">测试@RequestBody</a><br/><br/><hr/>
-
+<a href="cookieVlue">测试@CookieVlue</a><br/><br/>
+<a href="json/requestBody">测试@RequestBody</a><br/>
+<a href="xml/testSendXml">测试@XmlRootElement(发送)</a><br/>
+<a href="xml/testReadXml">测试@XmlRootElement(接收)</a><br/>
 </body>
 </html>

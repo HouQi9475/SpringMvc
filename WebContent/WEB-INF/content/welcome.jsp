@@ -21,5 +21,6 @@ ${requestScope.user.username }:欢迎您登录!您的年龄是${requestScope.use
 <a href="xml/testReadXml">测试@XmlRootElement(接收)</a><br/>
 <hr>
 <a href="people">测试数据转换</a>
+<a href="goUserLogin">测试数据验证</a>
 </body>
 </html>

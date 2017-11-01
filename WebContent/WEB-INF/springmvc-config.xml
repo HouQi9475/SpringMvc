@@ -29,6 +29,7 @@
 
 	<!-- spring可以自动去扫描base-package下的包或者其下的java类。如果扫描到有spring相关注解的类则注册为bean -->
 	<context:component-scan base-package="org.houqi.controller.annotation" />
+	<context:component-scan base-package="org.houqi.validator" />
 
 	<!-- 
 		设置配置方案

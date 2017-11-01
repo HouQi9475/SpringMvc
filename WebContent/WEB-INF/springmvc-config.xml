@@ -54,4 +54,18 @@
 			<value>.jsp</value>
 		</property>
 	</bean>
+	
+	<!-- 加入自定义字符转换器 -->
+	<!-- 装配自定义的类型转换器 -->
+	<mvc:annotation-driven conversion-service="conversionService"/>
+	<!-- 自定义类型转换器 -->
+	<bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+		<property name="converters">
+			<list>
+				<bean class="org.houqi.convert.StringToDateConvert">
+					<property name="datePattern" value="yyyy-MM-dd"/>
+				</bean>
+			</list>
+		</property>
+	</bean>
 </beans>

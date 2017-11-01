@@ -88,5 +88,20 @@
 	</table>
 	<form:checkbox path="reader" value="true"/>已阅读相关协议
 </form:form>
+<hr/>
+<form:form  action="peopleRegister" method="post">
+	<table>
+	<tr>
+		<td>登录名:</td>
+		<td><form:input path="loginname"/></td>
+	</tr>
+	<tr>
+		<td>生日:</td>
+		<td><form:input path="birthday"/></td>
+	</tr>
+	<tr>
+		<td colspan="2"><button type="submit" value="提交"></button></td>
+	</table>
+</form:form>
 </body>
 </html>

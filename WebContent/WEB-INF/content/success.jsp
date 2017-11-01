@@ -11,6 +11,7 @@
 </head>
 <body>
 <c:set var="now" value="<%=new Date() %>"/>
+登录名:${user.username }<br/>
 登录名:${people.loginname }<br/>
 日期:<fmt:formatDate value="${people.birthday }" pattern="yyyy年MM月dd日"/><br/>
 日期:<fmt:formatDate value="${people.birthday }" type="both"/><br/>

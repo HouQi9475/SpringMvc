@@ -20,7 +20,10 @@ ${requestScope.user.username }:欢迎您登录!您的年龄是${requestScope.use
 <a href="xml/testSendXml">测试@XmlRootElement(发送)</a><br/>
 <a href="xml/testReadXml">测试@XmlRootElement(接收)</a><br/>
 <hr>
-<a href="people">测试数据转换</a>
-<a href="goUserLogin">测试数据验证</a>
+<a href="people">测试数据转换</a><br/>
+<a href="goUserLogin">测试数据验证</a><br/>
+<hr>
+<a href="upload">测试文件上传</a>
+<a href="uploadPeople">测试文件上传(用户绑定)</a>
 </body>
 </html>

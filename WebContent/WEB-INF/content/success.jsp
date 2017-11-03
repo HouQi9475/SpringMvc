@@ -10,6 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <c:set var="now" value="<%=new Date() %>"/>
 登录名:${user.username }<br/>
 登录名:${people.loginname }<br/>
@@ -17,6 +18,9 @@
 日期:<fmt:formatDate value="${people.birthday }" type="both"/><br/>
 日期:<fmt:formatDate value="${people.birthday }" timeStyle="short" dateStyle="short" type="both"/><br/>
 日期:<fmt:formatDate value="${now }" timeStyle="medium" dateStyle="medium" type="both"/><br/>
-日期:<fmt:formatDate value="${now }" timeStyle="long" dateStyle="long" type="both"/> 
+日期:<fmt:formatDate value="${now }" timeStyle="long" dateStyle="long" type="both"/> <br/>
+<hr>
+<h3>文件下载</h3>
+<a href="download?filename=${requestScope.people.photo.originalFilename }">${requestScope.people.photo.originalFilename }</a>
 </body>
 </html>

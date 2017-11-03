@@ -69,4 +69,16 @@
 			</list>
 		</property>
 	</bean>
+	
+	<!-- 配置MultipartResovler -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- 上传文件大小限制，单位为字节（10M） -->
+		<property name="MaxUploadSize">
+			<value>10485760</value>
+		</property>
+		<!-- 请求编码，需要与jsp一直 -->
+		<property name="defaultEncoding">
+			<value>UTF-8</value>
+		</property>
+	</bean>
 </beans>
